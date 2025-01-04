@@ -1,0 +1,256 @@
+/* الجسم الرئيسي للصفحة */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* استبدال الخط بـ Segoe UI، الذي يُعد من الخطوط الحديثة والسلسة */
+  direction: rtl;
+  text-align: right;
+  font-size: 14px; /* تصغير حجم الخط ليكون أكثر توافقًا مع الشاشات الصغيرة */
+  line-height: 1.6; /* تحسين تباعد الأسطر */
+}
+
+/* الروابط داخل الشريط الجانبي */
+.sidebar-link i {
+  margin-right: 8px; /* تقليل المسافة بين الأيقونة والنص */
+}
+
+/* العناوين الجانبية */
+.sidebar-heading {
+  font-weight: bold;
+  margin-bottom: 8px; /* تقليل المسافة أسفل العنوان */
+  font-size: 16px; /* تصغير حجم الخط */
+  text-align: center;
+}
+
+/* الشعار */
+.logo {
+  padding-bottom: 24px;
+}
+
+/* معلومات المستخدم في الشريط الجانبي */
+.user-info {
+  height: 56px; /* تصغير الارتفاع */
+  padding: 12px; /* تقليل الحشوة */
+  font-size: 13px; /* تصغير حجم الخط */
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+  margin-top: auto; /* تثبيت في أسفل الشريط الجانبي */
+}
+
+/* الأيقونات */
+i.bi {
+  margin-left: 8px; /* تقليل المسافة بين الأيقونة والنص */
+}
+
+/* أزرار تسجيل الخروج */
+.sign-out {
+  height: 56px; /* تصغير الارتفاع */
+  display: inline-block;
+  padding: 12px;
+  font-size: 13px; /* تصغير حجم الخط */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* تخطيط العمود */
+.col1 {
+  margin-bottom: 50%;
+}
+
+/* الجدول */
+.table-responsive {
+  overflow-x: auto; /* تمرير أفقي عند الحاجة */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2; /* لون خلفية الصفوف الفردية */
+}
+
+/* الشارات (Badge) */
+.badge-success {
+  background-color: #e6f3ec; /* خلفية خضراء */
+  color: #008a40; /* لون النص */
+  font-size: 12px; /* تقليل حجم الخط */
+}
+
+.badge-warning {
+  background-color: #fff8e6; /* خلفية صفراء */
+  color: #9c7100; /* لون النص */
+  font-size: 12px; /* تقليل حجم الخط */
+}
+
+/* الشريط الجانبي */
+.sidebar {
+  background-color: #40b070; /* لون الخلفية */
+  min-height: 100vh; /* ارتفاع الشريط الجانبي */
+  padding: 16px; /* تقليل الحشوة */
+  color: white; /* لون النص */
+  display: flex; /* تفعيل flexbox */
+  flex-direction: column; /* ترتيب عمودي */
+  font-size: 14px; /* تصغير حجم الخط داخل الشريط الجانبي */
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none; /* إزالة التسطير */
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 767px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+/* تصميم الروابط الجانبية */
+.sidebar-link {
+  padding: 10px 14px; /* تقليل الحشوة لتصغير الحجم */
+  font-size: 14px; /* تقليل حجم الخط في الروابط */
+  display: block;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.sidebar-link:hover {
+  background-color: #008a40; /* تغيير لون الخلفية عند التمرير */
+  color: white;
+}
+
+.active {
+  background-color: #008a40; /* خلفية للرابط النشط */
+  color: white;
+}
+
+/* الشارات المخصصة */
+.custom-badge-success {
+  background-color: #e6f3ec;
+  color: #008a40;
+  padding: 0.375rem 0.75rem;
+  font-size: 12px; /* تقليل حجم الخط في الشارة */
+}
+
+.custom-badge-warning {
+  background-color: #fff8e6;
+  color: #9c7100;
+  padding: 0.375rem 0.75rem;
+  font-size: 12px; /* تقليل حجم الخط في الشارة */
+}
+
+/* العنوان */
+.header {
+  justify-content: space-around;
+  display: inline-block;
+}
+
+.addbtn {
+  width: 181px;
+}
+.sershbtn {
+  width: 247px;
+}
+
+.text-muted {
+  color: #8b959e;
+}
+
+hr {
+  color: #2b2b2b;
+}
+
+.path span {
+  color: #40a76f;
+}
+
+/* نموذج إضافة المستخدم */
+#addUser {
+  width: 280px; /* تقليل عرض النموذج */
+  font-size: 13px; /* تصغير حجم الخط في النموذج */
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+#addUser label {
+  display: block;
+  margin-bottom: 5px;
+}
+#addUser input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  font-size: 13px; /* تقليل حجم الخط في الحقول */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+#addUser button {
+  padding: 8px 16px;
+  font-size: 14px; /* تصغير حجم الخط في الأزرار */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#addUser button:hover {
+  background-color: #0056b3;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px; /* تصغير حجم الخط على الشاشات الصغيرة */
+  }
+
+  .sidebar {
+    padding: 12px; /* تقليل الحشوة في الشريط الجانبي */
+  }
+
+  .sidebar-link {
+    font-size: 12px; /* تصغير حجم الخط في الروابط الجانبية */
+  }
+
+  .user-info {
+    font-size: 12px; /* تصغير حجم الخط في معلومات المستخدم */
+  }
+
+  .sign-out {
+    font-size: 12px; /* تصغير حجم الخط في زر تسجيل الخروج */
+  }
+
+  #addUser {
+    width: 260px; /* تقليل عرض النموذج على الشاشات الصغيرة */
+  }
+}
+
+/* أزرار التمرير */
+.btn:hover {
+  background-color: #008a40;
+  color: #fff;
+  font-size: 14px; /* تصغير حجم الخط في الأزرار عند التمرير */
+}
+
+/* الجدول */
+table {
+  border-collapse: collapse; /* دمج حدود الجدول */
+  width: 100%;
+}
+
+.page-item:active {
+  background-color: #006d32; /* Slightly darker shade for active state */
+}
+
+.page-item.active .page-link {
+  color: #fff; /* White text for active page */
+    background-color: #006d32; /* Slightly darker shade for active state */
+
+}
+
+.page-link {
+  color: #008a40;
+  text-decoration: none;
+}
+
+.page-item:hover .page-link {
+  color: #006d32; /* Hover effect to match the active color */
+}
