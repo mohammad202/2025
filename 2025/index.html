@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إدارة المستخدمين</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row" style="height: 100vh">
+        <!-- الشريط الجانبي -->
+        <div class="col-12 col-md-3 col-lg-2 d-flex flex-column p-3 sidebar">
+          <div class="logo text-center mb-3">
+            <img src="./public/images/logo.png" alt="الشعار" width="100" />
+          </div>
+          <a href="#" class="sidebar-link d-block mb-3 active"
+            ><i class="bi bi-house"></i> الصفحة الرئيسية</a
+          >
+          <a href="#" class="sidebar-link d-block mb-3"
+            ><i class="bi bi-people"></i> إدارة المستخدمين</a
+          >
+          <a href="#" class="sidebar-link d-block mb-3"
+            ><i class="bi bi-chat-dots"></i> الجلسات</a
+          >
+          <a href="#" class="sidebar-link d-block mb-3"
+            ><i class="bi bi-hash"></i> المواضيع</a
+          >
+          <a href="#" class="sidebar-link d-block mb-3"
+            ><i class="bi bi-journal-text"></i> القرارات</a
+          >
+          <div class="mt-auto">
+            <a href="#" class="sidebar-link d-block mb-3"
+              ><i class="bi bi-headset"></i> الدعم الفني</a
+            >
+            <a href="#" class="sidebar-link d-block mb-3"
+              ><i class="bi bi-gear"></i> الإعدادات</a
+            >
+          </div>
+          <div class="user-info d-flex align-items-center mt-4">
+            <div>
+              <p class="mb-0">محمد عبد الله</p>
+              <span class="small text-muted">سكرتير </span>
+            </div>
+          </div>
+        </div>
+        <!-- نهاية الشريط الجانبي -->
+
+        <!-- المحتوى الرئيسي -->
+        <div class="col px-4 py-3">
+          <div class="path mb-2"><span>الرئيسية</span> / إدارة المستخدمين</div>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2>إضافة مستخدم</h2>
+          </div>
+          <p class="text-muted">تمكنك الصفحة من إدارة المستخدمين</p>
+          <hr />
+          <div class="row align-items-center py-3">
+            <div class="col-auto">
+              <button
+                class="btn btn-outline-secondary addbtn"
+                onclick="showForm()"
+              >
+                + إضافة مستخدم
+              </button>
+            </div>
+            <div class="col-auto ms-auto">
+              <input
+                type="text"
+                class="form-control sershbtn"
+                placeholder="بحث"
+              />
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table id="userTable" class="table table-striped table-hover">
+              <hr />
+              <thead>
+                <tr>
+                  <th>اسم المستخدم</th>
+                  <th>رقم الهوية</th>
+                  <th>رقم الجوال</th>
+                  <th>البريد الإلكتروني</th>
+                  <th>تاريخ الطلب</th>
+                  <th>الدور الوظيفي</th>
+                  <th>الحالة</th>
+                  <th>الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ناصر عبد الله</td>
+                  <td>12355329</td>
+                  <td>0500000000</td>
+                  <td>example@example.com</td>
+                  <td>2024/03/25</td>
+                  <td>رئيس لجنة</td>
+                  <td><span class="badge custom-badge-success">فعال</span></td>
+                  <td>
+                    <button class="btn btn-sm">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="d-flex justify-content-end mt-3">
+            <nav>
+              <ul class="pagination">
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+              </ul>
+            </nav>
+          </div>
+          <hr />
+          <p class="small text-center">جميع الحقوق محفوظة © 2025</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showForm() {
+        const form = document.getElementById("addUser");
+        form.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
