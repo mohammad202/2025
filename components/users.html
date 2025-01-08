@@ -1,0 +1,83 @@
+
+
+<div class="path mb-2"><span>الرئيسية</span> / إدارة المستخدمين</div>
+<div class="d-flex justify-content-between align-items-center mb-2">
+  <h2>إضافة مستخدم</h2>
+</div>
+<p class="text-muted">تمكنك الصفحة من إدارة المستخدمين</p>
+
+<hr />
+
+<div class="row align-items-center py-3">
+  <div class="col-auto">
+    <button class="btn btn-outline-secondary addbtn" onclick="showForm()">
+      + إضافة مستخدم
+    </button>
+  </div>
+  <div class="col-auto ms-auto">
+    <input type="text" class="form-control sershbtn" placeholder="بحث" />
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table id="userTable" class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>اسم المستخدم</th>
+        <th>رقم الهوية</th>
+        <th>رقم الجوال</th>
+        <th>البريد الإلكتروني</th>
+        <th>تاريخ الطلب</th>
+        <th>الدور الوظيفي</th>
+        <th>الحالة</th>
+        <th>الإجراءات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ناصر عبد الله</td>
+        <td>12355329</td>
+        <td>0500000000</td>
+        <td>example@example.com</td>
+        <td>2024/03/25</td>
+        <td>رئيس لجنة</td>
+        <td><span class="badge custom-badge-success">فعال</span></td>
+        <td>
+          <button class="btn btn-sm">
+            <i class="bi bi-eye"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="d-flex justify-content-between">
+  <!-- Records info -->
+  <div class="records-info text-muted">عرض 1 إلى 5 من إجمالي 50 سجلات</div>
+
+  <!-- Pagination -->
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">10</a></li>
+      <li class="page-item"><a class="page-link" href="#">9</a></li>
+      <li class="page-item"><a class="page-link" href="#">8</a></li>
+
+      <li class="page-item"><a class="page-link" href="#">...</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+
+      <li class="page-item active">
+        <a class="page-link" href="#">1</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="justify-content-end mb-3">
+    <select class="form-select w-auto" id="itemsPerPage">
+      <option value="5">5</option>
+      <option value="10" selected>10</option>
+      <option value="20">20</option>
+    </select>
+  </div>
+</div>

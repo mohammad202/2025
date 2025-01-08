@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("path/to/DINNextLTArabic-Regular.woff2") format("woff2"),
+    url("path/to/DINNextLTArabic-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: "DIN Next LT Arabic", Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+/* Ensure the HTML height is set */
+html {
+  height: -webkit-fill-available;
+}
+
+/* Main Section Styling */
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Sidebar Links */
+.sidebar-link i {
+  margin-right: 8px;
+}
+/* Sidebar Titles */
+.sidebar-heading {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+/* الشعار */
+.logo {
+  padding-bottom: 24px;
+}
+
+/* معلومات المستخدم في الشريط الجانبي */
+.user-info {
+  height: 56px; /* تصغير الارتفاع */
+  padding: 12px; /* تقليل الحشوة */
+  font-size: 13px; /* تصغير حجم الخط */
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+  margin-top: auto; /* تثبيت في أسفل الشريط الجانبي */
+}
+
+/* الأيقونات */
+i.bi {
+  margin-left: 8px; /* تقليل المسافة بين الأيقونة والنص */
+}
+
+/* أزرار تسجيل الخروج */
+.sign-out {
+  height: 56px; /* تصغير الارتفاع */
+  display: inline-block;
+  padding: 12px;
+  font-size: 13px; /* تصغير حجم الخط */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* تخطيط العمود */
+.col1 {
+  margin-bottom: 50%;
+}
+
+/* الجدول */
+.table-responsive {
+  overflow-x: auto; /* تمرير أفقي عند الحاجة */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2; /* لون خلفية الصفوف الفردية */
+}
+
+/* الشارات (Badge) */
+.badge-success {
+  background-color: #e6f3ec; /* خلفية خضراء */
+  color: #008a40; /* لون النص */
+  font-size: 12px; /* تقليل حجم الخط */
+}
+
+.badge-warning {
+  background-color: #fff8e6; /* خلفية صفراء */
+  color: #9c7100; /* لون النص */
+  font-size: 12px; /* تقليل حجم الخط */
+}
+
+/* الشريط الجانبي */
+.sidebar {
+  background-color: #40b070; /* لون الخلفية */
+  min-height: 100vh; /* ارتفاع الشريط الجانبي */
+  padding: 16px; /* تقليل الحشوة */
+  color: white; /* لون النص */
+  display: flex; /* تفعيل flexbox */
+  flex-direction: column; /* ترتيب عمودي */
+  font-size: 14px; /* تصغير حجم الخط داخل الشريط الجانبي */
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none; /* إزالة التسطير */
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 767px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+/* تصميم الروابط الجانبية */
+.sidebar-link {
+  padding: 10px 14px; /* تقليل الحشوة لتصغير الحجم */
+  font-size: 14px; /* تقليل حجم الخط في الروابط */
+  display: block;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.sidebar-link:hover {
+  background-color: #008a40; /* تغيير لون الخلفية عند التمرير */
+  color: white;
+}
+
+.sidebar-link.active {
+  background-color: #008a40; /* خلفية للرابط النشط */
+  color: white;
+}
+
+/* الشارات المخصصة */
+.custom-badge-success {
+  background-color: #e6f3ec;
+  color: #008a40;
+  padding: 0.375rem 0.75rem;
+  font-size: 12px; /* تقليل حجم الخط في الشارة */
+}
+
+.custom-badge-warning {
+  background-color: #fff8e6;
+  color: #9c7100;
+  padding: 0.375rem 0.75rem;
+  font-size: 12px; /* تقليل حجم الخط في الشارة */
+}
+
+/* العنوان */
+.header {
+  justify-content: space-around;
+  display: inline-block;
+}
+
+.addbtn {
+  width: 181px;
+}
+.sershbtn {
+  width: 247px;
+}
+
+.text-muted {
+  color: #8b959e;
+}
+
+hr {
+  color: #2b2b2b;
+}
+
+.path span {
+  color: #40a76f;
+}
+
+/* نموذج إضافة المستخدم */
+#addUser {
+  width: 280px; /* تقليل عرض النموذج */
+  font-size: 13px; /* تصغير حجم الخط في النموذج */
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+#addUser label {
+  display: block;
+  margin-bottom: 5px;
+}
+#addUser input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  font-size: 13px; /* تقليل حجم الخط في الحقول */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+#addUser button {
+  padding: 8px 16px;
+  font-size: 14px; /* تصغير حجم الخط في الأزرار */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#addUser button:hover {
+  background-color: #0056b3;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px; /* تصغير حجم الخط على الشاشات الصغيرة */
+  }
+
+  .sidebar {
+    padding: 12px; /* تقليل الحشوة في الشريط الجانبي */
+  }
+
+  .sidebar-link {
+    font-size: 12px; /* تصغير حجم الخط في الروابط الجانبية */
+  }
+
+  .user-info {
+    font-size: 12px; /* تصغير حجم الخط في معلومات المستخدم */
+  }
+
+  .sign-out {
+    font-size: 12px; /* تصغير حجم الخط في زر تسجيل الخروج */
+  }
+
+  #addUser {
+    width: 260px; /* تقليل عرض النموذج على الشاشات الصغيرة */
+  }
+}
+
+/* أزرار التمرير */
+.btn:hover {
+  background-color: #008a40;
+  color: #fff;
+  font-size: 14px; /* تصغير حجم الخط في الأزرار عند التمرير */
+}
+
+/* الجدول */
+table {
+  border-collapse: collapse; /* دمج حدود الجدول */
+  width: 100%;
+}
+.page-link {
+  border: none;
+  color: #596874;
+}
+.active > .page-link,
+.page-link.active {
+  background-color: #e6f3ec;
+  color: #008a40;
+  border-radius: 6px;
+}
+.pagination {
+  justify-content: center;
+}
+.records-info {
+  text-align: center;
+
+  margin-top: 10px;
+}
+.stats-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 5px 15px 5px 15px;
+}
+
+.stats-card span {
+  font-size: 2rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.row-item {
+  border-bottom: 1px solid #dee2e6;
+  padding: 10px 0;
+}
+.btn-success {
+  height: 38px;
+  width: 38px;
+}
+.box {
+  background-color: #faf9f5;
+}
+.boxG {
+  background-color: #009640;
+  color: #fff;
+  padding: 0px;
+}
